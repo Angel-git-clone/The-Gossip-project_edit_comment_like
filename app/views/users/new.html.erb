@@ -1,0 +1,53 @@
+<div class="text-center mt-4">
+  <h1>Nouveau Utilisateur</h1>
+</div>
+
+<div class="container ">
+  <div class="card border-info mb-3" style="margin: 25px, justify-content:center">
+    <%# Prénom %>
+  <div style="margin: 10px">
+    <%= form_tag url_for(action: 'create'), method: "post" do %>
+    <h5><%= label_tag 'Prénom' %></h5>
+    <%= text_field_tag 'first_name'%>
+  </div>
+
+  <%# Nom %>
+  <div style="margin: 10px">
+    <h5><%= label_tag 'Nom' %> </h5>
+    <%= text_field_tag 'last_name'%>
+  </div>
+
+  <%# Desciption %>
+  <div style="margin: 10px">
+    <h5><%= label_tag 'Description' %> </h5>
+    <%= text_field_tag 'description'%>
+  </div>
+
+  <%# email %>
+  <div style="margin: 10px">
+    <h5><%= label_tag 'email' %> </h5>
+    <%= text_field_tag 'email'%>
+  </div>
+
+  <%# Age %>
+  <div style="margin:10px">
+    <h5><%= label_tag 'Age' %></h5>
+    <%= text_field_tag 'age'%>
+  </div>
+
+  <%# Password %>
+  <div style="margin: 10px">
+    <h5><%= label_tag 'Mot de passe' %> </h5>
+    <%= text_field_tag 'password'%>
+  </div>
+
+  <%# Confirmation %>
+  <div style="margin: 10px">
+  <h5><%= label_tag 'Confirmer votre mot de passe' %></h5>
+  <%= text_field_tag 'confirm_password' %>
+  </div>
+</div>
+<div style="margin: 25px">
+  <%= submit_tag "Envoyer" %>
+  <% end %>
+</div>

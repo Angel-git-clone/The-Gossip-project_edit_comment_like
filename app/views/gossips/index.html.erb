@@ -1,0 +1,25 @@
+<body>
+  <main>
+    <div class="text-center my-5" >
+      <h1>Bienvenue sur The Gossip Project!</h1> <br>
+      <h4>Créer un nouveau Gossip</h4><br>
+      <a href="/gossips/new" class="btn btn-outline-info" role="button" aria-pressed="true">Nouveau Gossip</a>
+    </div>
+
+    <div class="container-fluid"><%#  Creating the different card %> 
+      <%# <div class="d-flex justify-content-center row mx-2 row-cols-5"> %>
+        <% @gossips.each do |gossip| %> 
+          <div class="card border-info mb-3" style="margin: 25px" style="max-width: 18rem; margin: 15px">
+            <div class="card-body card-deck">
+              <h5 class="card-title">Gossip n°<%= gossip.id  %></h5><%#  Show the id of each gossip %>
+              <h6 class="card-subtitle mb-2 text-muted"><%= gossip.user.first_name %></h6> <%# Show the first name of the gossip writer  %>
+              <p class="card-text"><%= gossip.title %></p> <%# Show the title of the gossip %>
+              <a href="gossips/<%=gossip.id%>" class="btn btn-outline-info">Voir le gossip</a> <%# Button to go inside a gossip, create a link for each gossip depending the id %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    
+  </main> 
+</body>

@@ -1,0 +1,14 @@
+<div style="margin: 25px">
+  <div class="card border-info mb-3" style="max-width: 18rem; margin: 15px">
+    <div class="card-header bg-info"><h4>Name : <%= @users.first_name %></h4></div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h6>Last Name :</h6><%= @users.last_name %> </li>
+        <li class="list-group-item">Email : <%= @users.email %></li>
+        <li class="list-group-item">Age : <%= @users.age %></li>
+        <li class="list-group-item">City : <%= @users.city.name %></a></li>
+        <li class="list-group-item">Description : <%= @users.description %></li>
+      </ul>
+    </div>
+  </div>
+</div>

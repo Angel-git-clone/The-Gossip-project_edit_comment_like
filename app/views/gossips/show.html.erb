@@ -1,0 +1,18 @@
+<div class="text-center my-4">
+<h1> Gossip </h1>
+</div>
+
+<%# Creating the differents link of the user, to access their pages %>
+<div class="card border-info mb-3" style="margin: 25px">
+  <div style="padding: 15px">
+    <h4>Ecrit par <a href="/users/<%= @gossips.user.id %>" style="color: #0dcaf0"><%= @gossips.user.first_name%></a></h4>
+    <h6>Ville de l'auteur : <%= @gossips.user.city.name %></a></h6>
+    <br>
+    <h5><p>Titre: <%= @gossips.title %></p></h5>
+    <p><%= @gossips.content %></p>
+    <br>
+    <p>Date de création : <%= @gossips.created_at  %></p>
+    <br>
+    <a href="/gossips/<%=@gossips.id%>/edit" class="btn btn-outline-info" role="button" aria-pressed="true">Editer votre Gossip</a>
+  </div>
+</div>
